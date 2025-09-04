@@ -1,29 +1,24 @@
-import './globals.css';
-import { Montserrat } from 'next/font/google';
-import { satoshi } from './fonts';
-
+import "./globals.css";
+import { Montserrat } from "next/font/google";
+import { satoshi } from "./fonts/fonts";
+import RootComponent from "./components/RootComponent";
 
 const montserrat = Montserrat({
-  subsets: ['latin'],
-  variable: '--font-montserrat',
+  subsets: ["latin"],
+  variable: "--font-montserrat",
 });
 
 export const metadata = {
-  title: 'Alyika Chatbot',
-  description: 'Environmental Awareness Chatbot',
+  title: "Alyika Chatbot",
+  description: "Environmental Awareness Chatbot",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${satoshi.variable} ${montserrat.variable}`}>
-      <body className="antialiased min-h-screen w-full bg-base100">
-        <div className="flex justify-center items-center border-amber-950">
-          {children}
-        </div>
+      <body className="h-auto bg-main-bg relative ">
+        <RootComponent>{children}</RootComponent>
       </body>
     </html>
   );
 }
-
-
-

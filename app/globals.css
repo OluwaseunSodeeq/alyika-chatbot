@@ -10,19 +10,19 @@
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1440px;
 
-  --color-dark-green: #012F25;
+  --color-dark-green: #012f25;
+  --color-main-bg: #ffffff;
   --color-navbar-bg: #f2f6f4;
   --color-light-green: #eafff0;
-  --color-yellow: #FDCD31;
-  --color-base100: #FFFFFF;
-  --color-black: #000000;
-  --color-success: #17BF63;
-  --color-warning: #FFAD1F;
-  --color-error: #E0245E;
+  --color-yellow: #fdcd31;
 
-  --font-satoshi: 'Satoshi', sans-serif;
-  --font-montserrat: 'Montserrat', sans-serif;
+
+  --font-satoshi: "Satoshi", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
 }
+/* :root {
+  font-size: 62.5%;
+} */
 
 /* Custom utility to hide scrollbars while keeping scroll functionality */
 .scrollbar-hide {
