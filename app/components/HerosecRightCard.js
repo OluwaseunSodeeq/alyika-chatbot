@@ -21,7 +21,7 @@ export default function HerosecRightCard() {
     {
       name: "Jane Smith",
       text: "Another feedback example for the carousel.",
-      rating: 5,
+      rating: 3,
       image: "/person.png",
       bgImage: "/bgImage1.png",
     },
@@ -43,26 +43,24 @@ export default function HerosecRightCard() {
   const current = testimonials[index];
 
   return (
-    <div className="relative xl:h-[40rem] 2xl:w-[44rem] xl:w-[44rem] sm:w-[24rem] rounded-[1.2rem] overflow-hidden shadow-lg border-2">
-      {/* Background Image */}
+    <div className="relative xl:h-[40rem] 2xl:w-[44rem] xl:w-[44rem] sm:w-[24rem] rounded-[1.2rem] overflow-hidden shadow-lg ">
       <div
         className="relative w-full h-full bg-cover bg-center bg-no-repeat "
         style={{ backgroundImage: `url(${current.bgImage})` }}
       >
-        {/* Input & Subscribe */}
-        <div className="absolute top-4 bg-white rounded-full px-3 py-1 shadow-md flex gap-2">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="px-3 py-1 rounded-full outline-none w-48 text-sm"
-          />
-            <Button btnBg={btnBg} textColor={textColor}>
-              Subscriber
-            </Button>
-
+        <div className="absolute top-4 flex gap-4 right-[2rem]">
+          <div>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="px-3 bg-main-bg py-2 rounded-full outline-none w-52 shadow-md text-sm"
+            />
+          </div>
+          <Button btnBg={btnBg} textColor={textColor}>
+            Subscribe
+          </Button>
         </div>
 
-        {/* Testimonial card */}
         <div className="absolute top-1/3 left-6 bg-yellow-400 p-4 rounded-xl max-w-xs shadow-md">
           <div className="flex items-center gap-3">
             <Image
@@ -73,9 +71,16 @@ export default function HerosecRightCard() {
               className=" object-cover"
             />
             <div className="flex flex-col">
-              <div className="flex text-black">
-                {Array.from({ length: current.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-black text-black" />
+              <div className="flex text-dark-green">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star
+                    key={i}
+                    className={`w-4 h-4 ${
+                      current.rating > i
+                        ? "fill-dark-green text-dark-green"
+                        : "fill-main-bg text-main-bg"
+                    }`}
+                  />
                 ))}
               </div>
               <p className="text-xs text-black mt-1">{current.text}</p>
@@ -83,38 +88,36 @@ export default function HerosecRightCard() {
           </div>
         </div>
 
-        {/* Arrows */}
-        <button
+        <div
           onClick={leftClick}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full shadow"
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-dark-green/50 py-2 px-3 rounded-md shadow"
         >
-          <ChevronLeft className="w-5 h-5" />
-        </button>
-        <button
+          <Image
+            src="/left-arrow.svg"
+            alt="left-arrow"
+            width={26}
+            height={26}
+          />
+        </div>
+        <div
           onClick={rightClick}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full shadow"
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-dark-green/50 py-2 px-3  rounded-md shadow"
         >
-          <ChevronRight className="w-5 h-5" />
-        </button>
+          <Image
+            src="/right-arrow.png"
+            alt="right-arrow"
+            width={26}
+            height={26}
+          />
+          {/* <ChevronRight className="w-5 h-5" /> */}
+        </div>
+        <div className="absolute bg-white p-3 pl-9 text-center right-0 bottom-0  rounded-tl-[4rem] clip-slant ">
+          <p className="text-gray-700 max-w-[18rem] text-left text-sm">
+            We’re not experts in suits, we’re students, storytellers, builders,
+            and friends who decided to do something.
+          </p>
+        </div>
       </div>
-
-      {/* Curved bottom section */}
-      {/* <div className="relative bg-white p-6 text-center">
-        <svg
-          className="absolute top-0 left-0 w-full -translate-y-full"
-          viewBox="0 0 1440 100"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0,100 C480,0 960,200 1440,100 L1440,00 L0,0 Z"
-            fill="white"
-          ></path>
-        </svg>
-        <p className="text-gray-700 max-w-xl mx-auto">
-          We’re not experts in suits, we’re students, storytellers, builders,
-          and friends who decided to do something.
-        </p> */}
-      {/* </div> */}
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import Wrapper from "../components/Wrapper";
 import HerosecRightCard from "../components/HerosecRightCard";
 import HerosecLeftCard from "../components/HerosecLeftCard";
+import WhatWeDoSection from "../components/WhatWeDoSection";
 
 export default function Page() {
   const bg = "#ffffff";
@@ -11,6 +12,7 @@ export default function Page() {
         <HerosecLeftCard />
         <HerosecRightCard />
       </div>
+      <WhatWeDoSection />
     </Wrapper>
   );
 }

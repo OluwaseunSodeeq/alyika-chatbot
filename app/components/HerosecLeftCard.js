@@ -24,7 +24,7 @@ export default function HerosecLeftCard() {
       </h2>
 
       <p className="text-base text-main-bg font-light leading-6 mt-8 italic">
-        <span className="font-bold">Hi there.</span> We’re a group of young
+        <span className="font-light">Hi there. </span> We’re a group of young
         Nigerians who’ve been knee-deep (literally) in flooded streets, trying
         to figure out how to stop climate change from wrecking our homes,
         schools, and futures. We’re not experts in suits, we’re students,

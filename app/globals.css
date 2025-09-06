@@ -15,10 +15,13 @@
   --color-navbar-bg: #f2f6f4;
   --color-light-green: #eafff0;
   --color-yellow: #fdcd31;
-
+  --color-black: #000000;
 
   --font-satoshi: "Satoshi", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
+}
+.clip-slant {
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
 }
 /* :root {
   font-size: 62.5%;
