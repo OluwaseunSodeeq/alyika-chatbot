@@ -69,6 +69,7 @@ export default function Footer() {
         </div>
       </div>
 
+
       {/* Bottom section */}
       <div className="mt-30 flex flex-col md:flex-row justify-between items-center text-sm text-white/70 gap-6">
         <p>Privacy Policy</p>
